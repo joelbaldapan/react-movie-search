@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect} from "react";
+import { createContext, useContext, useState, useEffect} from "react";
 import type { ReactNode } from "react";
 import type { Movie } from "../services/api";
 
@@ -13,7 +13,9 @@ type MovieContextProps = {
   isFavorite: (movieId: number) => boolean;
 };
 
-const MovieContext = createContext<MovieContextProps | undefined>(undefined);
+const MovieContext = createContext<MovieContextProps | null>(null);
+
+export const useMovieContext = () => useContext(MovieContext)
 
 export const MovieProvider = ({ children }: MovieProviderProps) => {
   const [favorites, setFavorites] = useState<Movie[]>([]);
