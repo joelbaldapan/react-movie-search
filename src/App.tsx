@@ -1,21 +1,12 @@
 import './App.css'
-
-type TextProps = {display: string}
+import MovieCard from "./components/MovieCard"
 
 function App() {
   return (
     <>
-      <Text display="Hello"/>
-      <Text display="World!"/>
+      <MovieCard movie={{title: "A", release_date: "2024"}}/>
+      <MovieCard movie={{title: "B", release_date: "2023"}}/>
     </>
-  )
-}
-
-function Text({display}: TextProps) {
-  return (
-    <div>
-      <p>{display}</p>
-    </div>
   )
 }
 
