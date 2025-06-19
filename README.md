@@ -1,6 +1,19 @@
-# react-movie-search
+<h1 align="center">
+🎥 React Movie Search! 🍿
+</h1>
+<p align="center">
+<b>A movie search tool with functionality for saving favorites (Practicing React + Typescript)</b>
+</p>
 
-🎞️ A movie search tool with functionality for saving favorites | Practicing React and Typescript
+## Live Demo
+
+### https://react-movie-search-joel-angelo-baldapans-projects.vercel.app/
+
+## Features:
+
+- Display trending movies
+- Search for movies
+- Favorite movies
 
 ## Installing App
 
@@ -22,7 +35,8 @@ cd react-movie-search
 npm install
 ```
 
-4. You are now good to go!
+4. Create an account on [TMDB](https://www.themoviedb.org) and take note of your API key.
+5. Rename `.env.example` to `.env`, and fill in your API key as the environment variable.
 
 ## Running App
 
