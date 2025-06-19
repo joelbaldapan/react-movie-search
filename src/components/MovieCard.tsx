@@ -1,4 +1,6 @@
-export type Movie = {
+import "../css/MovieCard.css";
+
+type Movie = {
   title: string;
   release_date: string;
   url?: string;
@@ -19,7 +21,7 @@ function MovieCard({ movie }: MovieCardProps) {
         <img src={movie.url} alt={movie.title} />
         <div className="movie-overlay">
           <button className="favorite-btn" onClick={onFavoriteClick}>
-            💗
+            ❤
           </button>
         </div>
       </div>
