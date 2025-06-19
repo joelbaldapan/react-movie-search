@@ -14,17 +14,17 @@
 
 .favorites-empty {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 4rem;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .favorites-empty h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #e50914;
+  color: #ffffff;
 }
 
 .favorites-empty p {

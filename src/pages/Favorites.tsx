@@ -5,7 +5,7 @@ import { useMovieContext } from "../contexts/MovieContext";
 function Favorite() {
   const { favorites } = useMovieContext()!;
 
-  if (favorites) {
+  if (favorites && favorites.length > 0) {
     return (
       <div className="favorites">
         <h2>Your Favorites</h2>
@@ -20,8 +20,8 @@ function Favorite() {
 
   return (
     <div className="favorites-empty">
-      <h2>Favorite Movies List Empty!</h2>
-      <p>Start favoriting movies, and they will appear here!</p>
+      <h2>Your Favorites List is Empty!</h2>
+      <p>Start favoriting movies in the Home Tab, and they will appear in Your Favorites!</p>
     </div>
   );
 }
