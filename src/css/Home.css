@@ -115,10 +115,10 @@
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 170px);
+    grid-template-columns: repeat(auto-fit, min(170px, 34vw));
     gap: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -130,7 +130,7 @@
     display: flex;
     gap: 1rem;
     padding: 0 1rem;
-    font-size: 0.9rem;
+    font-size: min(0.9rem, 3vw);
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -144,16 +144,6 @@
     border-radius: 4px;
     background-color: #211458;
     color: white;
-    font-size: 1rem;
-  }
-
-  .search-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #3a08ae;
-    color: white;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-    white-space: nowrap;
+    font-size: min(1rem, 3.2vw);
   }
 }

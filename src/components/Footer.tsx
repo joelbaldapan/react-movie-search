@@ -13,7 +13,7 @@ function Footer() {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
             // Reset src to replay GIF
-            logo.src = "public/signatureW.gif";
+            logo.src = "/signatureW.gif";
           }
         });
       },
@@ -35,7 +35,7 @@ function Footer() {
         <img
           id="logo"
           ref={logoRef}
-          src="../public/signatureW.gif"
+          src="/signatureW.gif"
           alt="By Joel Baldapan"
         />
       </a>
@@ -46,7 +46,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="github-logo" src="../public/github.png" alt="github logo" />
+          <img id="github-logo" src="/github.png" alt="github logo" />
         </a>
         <a
           href="https://github.com/joelbaldapan/react-movie-search"

@@ -35,13 +35,13 @@ a {
   color: #baaeff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .navbar {
     padding: 1rem;
   }
 
   .navbar-brand {
-    font-size: 1rem;
+    font-size: min(1rem, 3.2vw);
     padding: 1rem 1.25rem;
   }
 
@@ -50,7 +50,7 @@ a {
   }
 
   .nav-link {
-    font-size: 0.9rem;
+    font-size: min(0.9rem, 3vw);
     padding: 0.5rem;
   }
 }

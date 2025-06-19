@@ -107,7 +107,7 @@
   margin-top: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .movie-card h3 {
     font-size: 0.8rem;
   }
