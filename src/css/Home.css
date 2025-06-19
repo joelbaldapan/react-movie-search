@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
 .home {
   padding: 2rem 0;
   width: 100%;
@@ -14,6 +16,7 @@
 }
 
 .search-input {
+  font-family: "Fira Code", monospace;
   flex: 1;
   padding: 0.75rem 1rem;
   border: none;
@@ -30,7 +33,7 @@
 
 .search-btn {
   padding: 0.75rem 1.5rem;
-  background-color: #e50914;
+  background-color: #3a08ae;
   color: white;
   border-radius: 4px;
   font-weight: 500;
@@ -39,7 +42,7 @@
 }
 
 .search-btn:hover {
-  background-color: #f40612;
+  background-color: #2309e5;
 }
 
 @media (max-width: 639px) {
@@ -76,8 +79,12 @@
 }
 
 .page-btn.active {
-  background: #e50914;
+  background-color: #3a08ae;
   font-weight: bold;
+}
+
+.page-btn:hover {
+  background-color: #2309e5;
 }
 
 .page-btn:disabled {
@@ -92,4 +99,13 @@
   align-items: center;
   flex-wrap: wrap;
   row-gap: 0.5rem;
+}
+
+.loading {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

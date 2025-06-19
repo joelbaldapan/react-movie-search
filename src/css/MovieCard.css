@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: #1b1071;
   transition: transform 0.2s;
   height: 100%;
   display: flex;
@@ -97,7 +97,7 @@
 }
 
 .movie-info p {
-  color: #999;
+  color: #bebebf;
   font-size: 0.9rem;
 }
 

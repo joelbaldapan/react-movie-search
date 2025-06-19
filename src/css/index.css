@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fira Code', monospace;
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,6 +30,13 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  background: linear-gradient(
+    0deg,
+    rgba(9, 3, 43, 1) 0%,
+    rgba(4, 1, 21, 1) 15%,
+    rgba(4, 1, 21, 1) 85%,
+    rgba(9, 3, 43, 1) 100%
+  );
 }
 
 #root {

@@ -43,7 +43,7 @@ function Home() {
       setMovies(searchResults);
       setError(null);
     } catch (err) {
-      console.log(err)
+      console.log(err);
       setError("Failed to search movies...");
     } finally {
       setLoading(false);
@@ -57,6 +57,7 @@ function Home() {
 
   return (
     <div className="home">
+      {/* Search movies form */}
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
@@ -70,8 +71,11 @@ function Home() {
         </button>
       </form>
 
+      {/* Loading and Error */}
       {loading && <div className="loading">Loading movies...</div>}
       {error && <div className="error-message">{error}</div>}
+
+      {/* Display Movie Cards */}
       {!loading && !error && (
         <div className="movies-grid">
           {movies.map((movie) => (
@@ -79,7 +83,7 @@ function Home() {
           ))}
         </div>
       )}
-
+      
       {/* Page selector, only show when not searching */}
       {!searchQuery && (
         <div className="page-selector">
