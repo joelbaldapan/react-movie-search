@@ -28,7 +28,7 @@ function MovieCard({ movie }: MovieCardProps) {
             className={`favorite-btn ${favorite ? "active" : ""}`}
             onClick={onFavoriteClick}
           >
-            ❤
+            ♥
           </button>
         </div>
       </div>

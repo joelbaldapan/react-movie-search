@@ -35,7 +35,7 @@ function Footer() {
         <img
           id="logo"
           ref={logoRef}
-          src="public/signatureW.gif"
+          src="../public/signatureW.gif"
           alt="By Joel Baldapan"
         />
       </a>
@@ -46,7 +46,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="github-logo" src="public/github.png" alt="github logo" />
+          <img id="github-logo" src="../public/github.png" alt="github logo" />
         </a>
         <a
           href="https://github.com/joelbaldapan/react-movie-search"

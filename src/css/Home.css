@@ -115,18 +115,27 @@
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 170px);
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
   .search-form {
     margin: 0 auto 2rem;
     display: flex;
     gap: 1rem;
     padding: 0 1rem;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
   }
-  
+
   .search-input {
     font-family: "Fira Code", monospace;
     flex: 1;
@@ -135,7 +144,7 @@
     border-radius: 4px;
     background-color: #211458;
     color: white;
-    font-size: 0.65rem;
+    font-size: 1rem;
   }
 
   .search-btn {

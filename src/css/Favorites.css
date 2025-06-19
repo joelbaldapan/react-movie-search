@@ -23,13 +23,13 @@
 
 .favorites-empty h2 {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: min(2rem, 6vw);
   color: #ffffff;
 }
 
 .favorites-empty p {
   color: #999;
-  font-size: 1.2rem;
+  font-size: mi(1.2rem, 5vw);
   line-height: 1.6;
 }
 

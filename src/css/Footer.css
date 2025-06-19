@@ -8,23 +8,22 @@ footer {
 }
 
 #logo {
-  width: 25rem;
+  width: min(25rem, 50vw);
   transition: rotate 0.5s;
 }
 
 #github a {
-  font-size: 1.5rem;
+  font-size: min(1.5rem, 4vw);
   font-weight: 500;
   text-decoration: underline;
 }
 
 #github-logo {
-  width: 3rem;
+  width: min(3rem, 8vw);
   transition: rotate 0.5s;
 }
 
 #github-logo:hover {
-  width: 3rem;
   rotate: 360deg;
 }
 
