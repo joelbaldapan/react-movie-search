@@ -1,0 +1,45 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2rem;
+  width: 100%;
+}
+
+#logo {
+  width: 25rem;
+  transition: rotate 0.5s;
+}
+
+#github a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#github-logo {
+  width: 3rem;
+  transition: rotate 0.5s;
+}
+
+#github-logo:hover {
+  width: 3rem;
+  rotate: 360deg;
+}
+
+#github-logo:hover,
+#logo:hover {
+  /* Tint to purple shade */
+  filter: brightness(0.2) sepia(97%) saturate(5000%)
+    hue-rotate(265deg);
+  cursor: pointer;
+}
+
+#github {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

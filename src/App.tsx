@@ -2,6 +2,7 @@ import "./css/App.css";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { MovieProvider } from "./contexts/MovieContext";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/favorites" element={<Favorites key={location.key} />} />
         </Routes>
       </main>
+      <Footer />
     </MovieProvider>
   );
 }
