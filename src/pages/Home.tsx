@@ -1,19 +1,20 @@
 import MovieCard from "../components/MovieCard";
 
-import {useState} from "react"
+import { useState } from "react";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const movies = [
-    { id: 1, title: "A", release_date: "2020" },
-    { id: 2, title: "B", release_date: "2021" },
-    { id: 3, title: "C", release_date: "2022" },
+    { id: 1, title: "AAA", release_date: "2020" },
+    { id: 2, title: "BBB", release_date: "2021" },
+    { id: 3, title: "CCC", release_date: "2022" },
   ];
 
-  const handleSearch = (e: { preventDefault: () => void; }) => {
-    e.preventDefault()
-    alert(searchQuery)
+  const handleSearch = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSearchQuery("");
   };
 
   return (
@@ -26,13 +27,18 @@ function Home() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button type="submit" className="search-btn">Search</button>
+        <button type="submit" className="search-btn">
+          Search
+        </button>
       </form>
 
       <div className="movies-grid">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
-        ))}
+        {movies.map(
+          (movie) =>
+            movie.title.toLowerCase().startsWith(searchQuery.toLowerCase()) && (
+              <MovieCard movie={movie} key={movie.id} />
+            )
+        )}
       </div>
     </div>
   );
