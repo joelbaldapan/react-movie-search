@@ -63,11 +63,13 @@ function Home() {
       {/* Show loading or error message */}
       {loading && <div className="loading">Loading movies...</div>}
       {error && <div className="error-message">{error}</div>}
-      <div className="movies-grid">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
-        ))}
-      </div>
+      {!loading && !error && (
+        <div className="movies-grid">
+          {movies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
