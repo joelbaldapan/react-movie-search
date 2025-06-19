@@ -18,8 +18,8 @@ interface MoviesResponse {
   total_results: number;
 }
 
-export async function getPopularMovies(): Promise<Movie[]> {
-  const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
+export async function getPopularMovies(page: number = 1): Promise<Movie[]> {
+  const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&page=${page}`);
   const data: MoviesResponse = await response.json();
   return data.results;
 }

@@ -7,16 +7,19 @@ import { useState, useEffect } from "react";
 function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [movies, setMovies] = useState<Movie[]>([]);
-  // Store error and loading
   const [error, setError] = useState<string | null>(null);
+  // Store error and loading
   const [loading, setLoading] = useState<boolean>(true);
+  const [page, setPage] = useState<number>(1);
 
   // Get movies, only once
   useEffect(() => {
     const loadPopularMovies = async () => {
+      setLoading(true);
       try {
-        const popularMovies = await getPopularMovies();
+        const popularMovies = await getPopularMovies(page);
         setMovies(popularMovies);
+        setError(null);
       } catch (err) {
         console.log(err);
         setError("Failed to load movies...");
@@ -24,8 +27,10 @@ function Home() {
         setLoading(false);
       }
     };
-    loadPopularMovies();
-  }, []);
+    if (!searchQuery) {
+      loadPopularMovies();
+    }
+  }, [page, searchQuery]);
 
   const handleSearch = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -38,12 +43,17 @@ function Home() {
       setMovies(searchResults);
       setError(null);
     } catch (err) {
-      console.log(err);
+      console.log(err)
       setError("Failed to search movies...");
     } finally {
       setLoading(false);
     }
   };
+
+  // Reset to page 1 when searching
+  useEffect(() => {
+    if (searchQuery) setPage(1);
+  }, [searchQuery]);
 
   return (
     <div className="home">
@@ -60,13 +70,28 @@ function Home() {
         </button>
       </form>
 
-      {/* Show loading or error message */}
       {loading && <div className="loading">Loading movies...</div>}
       {error && <div className="error-message">{error}</div>}
       {!loading && !error && (
         <div className="movies-grid">
           {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
+          ))}
+        </div>
+      )}
+
+      {/* Page selector, only show when not searching */}
+      {!searchQuery && (
+        <div className="page-selector">
+          {Array.from({ length: 10 }, (_, i) => (
+            <button
+              key={i + 1}
+              className={`page-btn${page === i + 1 ? " active" : ""}`}
+              onClick={() => setPage(i + 1)}
+              disabled={loading}
+            >
+              {i + 1}
+            </button>
           ))}
         </div>
       )}
