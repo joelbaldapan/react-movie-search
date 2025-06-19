@@ -35,6 +35,11 @@ function MovieCard({ movie }: MovieCardProps) {
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <p>{movie.release_date?.split("-")[0]}</p>
+        <p className="user-rating">
+          {movie.vote_average
+            ? <>★ {movie.vote_average.toFixed(2)}</>
+            : "Rating unavailable"}
+        </p>
       </div>
     </div>
   );
