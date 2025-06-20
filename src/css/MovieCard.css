@@ -62,6 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "'Roboto Mono', monospace";
   transition: background-color 0.2s;
 }
 
@@ -92,6 +93,7 @@
 }
 
 .movie-info h3 {
+  color: #fdfdff;
   font-size: 1rem;
   margin: 0;
 }
